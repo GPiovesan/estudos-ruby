@@ -1,14 +1,15 @@
 require_relative 'sortear_palavra'
+require_relative 'regras'
 
 class JogoDaForca
+    include Regras
+
     attr_reader :palavra
     attr_accessor :tentativas_restantes
     attr_accessor :tentativas_falhas
     attr_accessor :tentativas_totais
     attr_accessor :jogando
     attr_accessor :palavra_invisivel
-
-    VIDAS = 6
 
     def initialize
         @tentativas_totais = 0
