@@ -5,15 +5,18 @@ jogo = JogoDaForca.new
 menu = 0
 
 while jogo.jogando do
+    # Renderiza o menu do jogo em tela
     menu = Menu.render(jogo.palavra_invisivel, jogo.tentativas_restantes, jogo.tentativas_falhas)
     case menu
         when 1
-            print "Digite uma LETRA: "
+            puts "Digite uma LETRA: "
             jogo.tentar_letra(gets.chomp)
         when 2
-            print "Digite uma PALAVRA"
+            puts "Digite uma PALAVRA: "
             jogo.adivinhar_palavra(gets.chomp)
         when 3
             jogo.jogando = false
     end
 end
+
+menu = Menu.render_after_games(jogo.venceu, jogo.tentativas_totais)

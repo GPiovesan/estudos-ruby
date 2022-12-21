@@ -1,3 +1,3 @@
 module Regras
-    VIDAS = 6
+    TENTATIVAS = 6
 end
