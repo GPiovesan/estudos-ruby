@@ -57,7 +57,7 @@ class JogoDaForca
         else
             puts "Você obteve #{acertos} acerto(s)"
         end
-
+        sleep 2
         verifica_condicoes_fim_de_jogo
     end
 

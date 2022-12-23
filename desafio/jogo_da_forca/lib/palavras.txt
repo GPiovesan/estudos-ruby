@@ -4,3 +4,6 @@ papagaio
 vaca
 panda
 leao
+rinoceronte
+flamingo
+ornitorrinco

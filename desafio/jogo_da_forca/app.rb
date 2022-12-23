@@ -10,12 +10,15 @@ while jogo.jogando do
     case menu
         when 1
             puts "Digite uma LETRA: "
-            jogo.tentar_letra(gets.chomp)
+            jogo.tentar_letra(gets.chomp.downcase)
         when 2
             puts "Digite uma PALAVRA: "
             jogo.adivinhar_palavra(gets.chomp)
         when 3
             jogo.jogando = false
+        else
+            puts "Opção inválida! Digite UM NÚMERO das opções acima"
+            sleep 2
     end
 end
 
